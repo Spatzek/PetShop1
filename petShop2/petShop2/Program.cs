@@ -47,7 +47,6 @@ namespace petShop2
                 "list All pets",
                 "Show Pets",
                 "Add Pet",
-                "Search Race",
                 "Delete Pet",
                 "Edit Pet",
                 "Sort Pets",
@@ -56,7 +55,7 @@ namespace petShop2
             };
 
             var selection = ShowMenu(menuItems);
-                while (selection != 9)
+                while (selection != 8)
             {
                 switch(selection)
                 {
@@ -67,22 +66,22 @@ namespace petShop2
                     case 2:
                         AddPets();
                         break;
-                        /*
+                        
                     case 3:
-                        AddPet();
-                        break;
-                    case 4:
                         DeletePet();
-                    case 5:
+                        break;
+                        
+                    case 4:
                         EditPet();
                         break;
-                    case 6:
+                        /*
+                    case 5:
                         SortPrice();
                         break;
-                    case 7:
+                    case 6:
                         SearchPrice();
                         break;
-                    case 8:
+                    case 7:
                         Exit();
                         break;
                         */
@@ -95,7 +94,50 @@ namespace petShop2
            
             Console.ReadLine(); 
             
+            }
+
+        private static void EditPet()
+        {
+            var Pets = FindPetById();
+            Console.WriteLine("Name: ");
+            Pets.Name = Console.ReadLine();
+            Console.WriteLine("Race: ");
+            Pets.Race = Console.ReadLine();
+            Console.WriteLine("Color: ");
+            Pets.Color = Console.ReadLine();
+            Console.WriteLine("previousOwner: ");
+            Pets.PreviousOwner = Console.ReadLine();
+
         }
+
+        private static  Pet FindPetById()
+            {
+            Console.WriteLine("Insert Pet Id: ");
+            int id;
+            while (!int.TryParse(Console.ReadLine(), out petId))
+            {
+                Console.WriteLine("Please enter int");
+            }
+
+            foreach (var Pet in pets)
+            {
+                if (Pet.PetId == petId)
+                {
+                    return Pet;
+                }
+            }
+            return null;
+            }
+            private static void DeletePet()
+            {
+
+            var petFound = FindPetById();
+            if(petFound != null)
+            {
+                pets.Remove(petFound);
+            }
+            
+            }
 
         private static void AddPets()
         {
@@ -114,8 +156,8 @@ namespace petShop2
             Console.WriteLine("PreviousOwner: ");
             var previousOwner = Console.ReadLine();
 
-            Console.WriteLine("Price: ");
-            var price = Console.ReadLine();
+          //  Console.WriteLine("Price: ");
+          //  double price = Console.
 
             pets.Add(new Pet()
             {
@@ -124,7 +166,7 @@ namespace petShop2
                 Race = race,
                 Color = color,
                 PreviousOwner = previousOwner,
-                //Price = double price,
+              //  Price = price,
 
             });
         }
@@ -164,7 +206,7 @@ namespace petShop2
                 || selection < 1
                 || selection >9)    
             {
-                Console.WriteLine("Select a number between 1-8");
+                Console.WriteLine("Select a number between 1-7");
             }
            
             return selection;
