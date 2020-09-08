@@ -21,7 +21,7 @@ namespace PetShop
             List<Pet> pets = _petService.GetPets();
             foreach (var pet in pets)
             {
-                Console.WriteLine($"{pet.PetId}\n{pet.Name}\n{pet.Race}\n{pet.Birthdate}\n{pet.SoldDate}\n{pet.Price}");
+                Console.WriteLine($"{pet.PetId}\n{pet.Name}\n{pet.Race}\n{pet.Color}\n{pet.Birthdate}\n{pet.SoldDate}\n{pet.Price}\n {pet.PreviousOwner}");
             }
 
         }
