@@ -15,6 +15,22 @@ namespace PetShop.CORE.ApplicationService.Impl
             _petRepository = petRepository;
 
         }
+
+        public Pet CreatePet(Pet pet)
+        {
+            return _petRepository.CreatePet(pet);
+        }
+
+        public Pet DeletePet(int id)
+        {
+            return _petRepository.DeletePet(id);
+        }
+
+        public Pet GetPetById(int id)
+        {
+            return _petRepository.GetPetById(id);
+        }
+
         public List<Pet> GetPets()
         {
             return _petRepository.ReadPets().ToList();

@@ -7,7 +7,15 @@ namespace PetShop.CORE.DomainService
 {
     public interface IPetRepository
     {
+       
+
         public IEnumerable<Pet> ReadPets();
+
+        public Pet CreatePet(Pet pet);
+
+        public Pet DeletePet(int id);
+
+        public Pet GetPetById(int id);
 
     }
 }
