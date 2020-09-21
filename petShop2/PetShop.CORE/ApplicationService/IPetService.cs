@@ -10,6 +10,7 @@ namespace PetShop.CORE.ApplicationService
         public List<Pet> GetPets();
         public Pet DeletePet(int id);
 
+        public Pet PutPet(Pet pet);
         public Pet GetPetById(int id);
 
         public Pet CreatePet(Pet pet);

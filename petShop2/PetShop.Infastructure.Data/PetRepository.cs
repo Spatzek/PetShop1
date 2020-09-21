@@ -11,10 +11,7 @@ namespace PetShop.Infastructure.Data
     private static IEnumerable<Pet> _pets = new List<Pet>();
 
     private static int _petId = 1;
-        public PetRepository()
-    {
 
-    }
         public IEnumerable<Pet> ReadPets()
         {
             return _pets;
@@ -37,6 +34,23 @@ namespace PetShop.Infastructure.Data
 
             }
             return null;
+        }
+        public Pet PutPet(Pet pet)
+        {
+
+            Pet pet1 = GetPetById(pet.PetId);
+            if (pet1 != null)
+            {
+                pet1.Name = pet.Name;
+                pet1.Color = pet.Color;
+                pet1.PreviousOwner = pet.PreviousOwner;
+                pet1.Price = pet.Price;
+                pet1.Race = pet.Race;
+                pet1.SoldDate = pet.SoldDate;
+                pet1.Birthdate = pet.Birthdate;
+
+            }
+            return pet1;
         }
         public Pet DeletePet(int id)
         {

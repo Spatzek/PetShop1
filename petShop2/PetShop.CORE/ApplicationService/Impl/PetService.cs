@@ -20,7 +20,10 @@ namespace PetShop.CORE.ApplicationService.Impl
         {
             return _petRepository.CreatePet(pet);
         }
-
+        public Pet PutPet(Pet pet)
+        {
+            return _petRepository.PutPet(pet);
+        }
         public Pet DeletePet(int id)
         {
             return _petRepository.DeletePet(id);

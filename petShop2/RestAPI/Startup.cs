@@ -31,8 +31,10 @@ namespace RestAPI
         {
             services.AddScoped<IPetRepository, PetRepository>();
             services.AddScoped<IPetService, PetService>();
-            
-            
+            services.AddScoped<IPreviousOwnerRepository, PreviousOwnerRepository>();
+            services.AddScoped<IPreviousOwnerService, PreviousOwnerService>();
+            services.AddScoped<IPetTypeRepository, PetTypeRepository>();
+            services.AddScoped<IPetTypeService, PetTypeService>();
             services.AddControllers();
         }
 
@@ -45,7 +47,9 @@ namespace RestAPI
                 using (var scope = app.ApplicationServices.CreateScope())
                 {
                     var petRepository = scope.ServiceProvider.GetService<IPetRepository>();
-                    new DataInitializer(petRepository).INitData();
+                    var petTypeRepository = scope.ServiceProvider.GetService<IPetTypeRepository>();
+                    var previousOwnerRepository = scope.ServiceProvider.GetService<IPreviousOwnerRepository>();
+                    new DataInitializer(petRepository, previousOwnerRepository, petTypeRepository).INitData();
 
                 }
             }

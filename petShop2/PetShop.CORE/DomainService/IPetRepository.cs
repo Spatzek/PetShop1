@@ -12,7 +12,7 @@ namespace PetShop.CORE.DomainService
         public IEnumerable<Pet> ReadPets();
 
         public Pet CreatePet(Pet pet);
-
+        public Pet PutPet(Pet pet);
         public Pet DeletePet(int id);
 
         public Pet GetPetById(int id);
