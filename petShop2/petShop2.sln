@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetShop.Core.Entity", "PetS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetShop.Infastructure.Data", "PetShop.Infastructure.Data\PetShop.Infastructure.Data.csproj", "{1452ABA4-FEB7-4621-A818-C1BCA55B2032}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestAPI", "RestAPI\RestAPI.csproj", "{213A4628-33DA-444D-9658-5A9205FAC71B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestAPI", "RestAPI\RestAPI.csproj", "{213A4628-33DA-444D-9658-5A9205FAC71B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetApp.Infastructure.Data", "PetApp\PetApp.Infastructure.Data.csproj", "{CB459F42-DF5C-448A-A045-F8BA9054DFD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{213A4628-33DA-444D-9658-5A9205FAC71B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{213A4628-33DA-444D-9658-5A9205FAC71B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{213A4628-33DA-444D-9658-5A9205FAC71B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB459F42-DF5C-448A-A045-F8BA9054DFD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB459F42-DF5C-448A-A045-F8BA9054DFD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB459F42-DF5C-448A-A045-F8BA9054DFD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB459F42-DF5C-448A-A045-F8BA9054DFD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{74808035-5D39-485A-A3C2-CB474AB2FB95} = {0797B789-F4D3-496D-A8AC-856A03299BCF}
 		{1452ABA4-FEB7-4621-A818-C1BCA55B2032} = {03258AFD-0D57-43F2-AEA2-4D9ECC9B5787}
 		{213A4628-33DA-444D-9658-5A9205FAC71B} = {0FB3B3CB-EFA9-4266-A18C-D6CB8BAF0C65}
+		{CB459F42-DF5C-448A-A045-F8BA9054DFD0} = {03258AFD-0D57-43F2-AEA2-4D9ECC9B5787}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {49DAE9BE-3C71-4E2A-A581-AAA8C98AB2C3}

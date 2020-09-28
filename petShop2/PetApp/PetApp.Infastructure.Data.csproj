@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Stripe.net" Version="39.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PetShop.Core.Entity\PetShop.Core.Entity.csproj" />
+    <ProjectReference Include="..\PetShop.CORE\PetShop.CORE.csproj" />
+    <ProjectReference Include="..\PetShop.Infastructure.Data\PetShop.Infastructure.Data.csproj" />
+    <ProjectReference Include="..\petShop2\PetShop.csproj" />
+    <ProjectReference Include="..\RestAPI\RestAPI.csproj" />
+  </ItemGroup>
+
+</Project>
